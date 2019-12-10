@@ -1,0 +1,30 @@
+{
+  "environments": ["coffee-mail"],
+  "folder_names": ["coffee-mail"],
+
+  "use_seed": true,
+  "num_tasks": 100,
+
+  "hide_state_variables": true,
+  "use_one_hot_vector_states": false,
+
+  "debug": true,
+  "train_model": true ,
+  "num_episodes": 20000,
+  "max_episode_length": 100,
+  "learning_rate": 0.1,
+  "exploration_rate": 0.1,
+  "discount_rate": 0.99,
+  "is_tabular_case": true,
+  "use_reward_shaping": false,
+
+  "interleaved_automaton_learning": true,
+  "ilasp_timeout": 3600,
+  "ilasp_version": "2",
+  "use_compressed_traces": true,
+  "starting_num_states": 3,
+  "use_restricted_observables": false,
+  "max_disjunction_size": 1,
+  "learn_acyclic_graph": true,
+  "symmetry_breaking_method": "increasing_path"
+}

@@ -1,0 +1,36 @@
+{
+  "environments": ["water-rg"],
+  "folder_names": ["water-rg"],
+
+  "use_seed": false,
+  "num_tasks": 1,
+
+  "debug": true,
+  "train_model": true,
+  "num_episodes": 75000,
+  "max_episode_length": 100,
+  "learning_rate": 1e-05,
+  "exploration_rate": 0.1,
+  "discount_rate": 0.9,
+  "is_tabular_case": false,
+  "use_reward_shaping": false,
+
+  "use_double_dqn": true,
+  "target_net_update_frequency": 100,
+  "num_hidden_layers": 4,
+  "num_neurons_per_layer": 64,
+  "use_experience_replay": true,
+  "experience_replay_buffer_size": 50000,
+  "experience_replay_batch_size": 32,
+  "experience_replay_start_size": 1000,
+
+  "interleaved_automaton_learning": true,
+  "ilasp_timeout": 3600,
+  "ilasp_version": "2",
+  "use_compressed_traces": true,
+  "starting_num_states": 3,
+  "use_restricted_observables": false,
+  "max_disjunction_size": 1,
+  "learn_acyclic_graph": true,
+  "symmetry_breaking_method": "increasing_path"
+}

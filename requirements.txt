@@ -1,0 +1,5 @@
+matplotlib==3.0.3
+numpy==1.17.4
+torch==1.1.0
+-e git://github.com/ertsiger/gym-subgoal-automata.git@ec8439f#egg=gym-subgoal-automata
+scipy==1.3.3
