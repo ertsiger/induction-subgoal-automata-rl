@@ -132,13 +132,13 @@ if __name__ == "__main__":
 
             for folder in task_setting_folders:
                 rewards_steps_folder_path = os.path.join(folder, ISAAlgorithm.REWARD_STEPS_FOLDER)
-                rewards_steps_log_files = [os.path.join(rewards_steps_folder_path, f) for f in os.listdir(rewards_steps_folder_path)]
-                automaton_learning_episodes_path = os.path.join(folder, ISAAlgorithm.AUTOMATON_LEARNING_EPISODES_FILENAME)
-
+                rewards_steps_log_files = os.listdir(rewards_steps_folder_path)
+                
                 if len(rewards_steps_log_files) != num_tasks:
                     raise Exception("Error: The expected number of tasks is %d and was %d." % (num_tasks, len(rewards_steps_log_files)))
 
                 try:
+                    automaton_learning_episodes_path = os.path.join(folder, ISAAlgorithm.AUTOMATON_LEARNING_EPISODES_FILENAME)
                     current_automaton_learning_episodes = read_automaton_learning_episodes(automaton_learning_episodes_path)
                 except IOError:
                     current_automaton_learning_episodes = []
@@ -150,7 +150,8 @@ if __name__ == "__main__":
                 else:
                     automaton_learning_episodes[setting_label] = set(current_automaton_learning_episodes)
 
-                rewards, steps = read_reward_steps_list(rewards_steps_log_files[task_id])
+                rewards_steps_log_file = os.path.join(folder, ISAAlgorithm.REWARD_STEPS_FOLDER, ISAAlgorithm.REWARD_STEPS_FILENAME % task_id)
+                rewards, steps = read_reward_steps_list(rewards_steps_log_file)
                 num_episodes = len(rewards)
 
                 np_rewards = np.array(rewards)
