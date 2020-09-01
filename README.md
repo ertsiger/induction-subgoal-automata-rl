@@ -222,6 +222,9 @@ average and the standard error across runs except where noted.
 * `example_length_inc` - Average and standard deviation of the incomplete example length taking into account the examples from all tasks. 
 
 ## <a name="result-reproducibility"></a>Reproducibility of the paper results
+The experiments ran on 3.40GHz Intel Core i7-6700 processors using Python 3.6.9. The `requirements.txt` file contains 
+the versions of the required Python packages.
+
 We provide scripts that generate all the experiments described in the paper as well as scripts that generate plots and 
 statistics reports from them. The folder `paper-experiments` in the root of the repository has a folder called
 `results` containing JSON files for generating plots and reports. We now describe how to create the experiments and then
