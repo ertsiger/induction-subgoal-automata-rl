@@ -16,7 +16,7 @@ def mkdir(dir_name):
 
 
 def rm_dir(dir_name):
-    if os.path.exists(dir_name):
+    if path_exists(dir_name):
         shutil.rmtree(dir_name, ignore_errors=True)
 
 
@@ -39,6 +39,10 @@ def is_file_empty(path):
     return os.path.getsize(path) == 0
 
 
+def path_exists(path):
+    return os.path.exists(path)
+
+
 def sort_by_ord(input_list):
     input_list.sort(key=lambda s: ord(s.lower()))
 
@@ -50,4 +54,9 @@ def randargmax(input_vector):
 def read_json_file(filepath):
     with open(filepath) as f:
         return json.load(f)
+
+
+def write_json_obj(obj, filepath):
+    with open(filepath, 'w') as f:
+        json.dump(obj, f)
 

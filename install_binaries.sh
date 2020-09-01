@@ -42,11 +42,11 @@ clingo_folder="clingo"
 clingo_binary="clingo"
 
 if [[ "$OSTYPE" == "linux-gnu" ]]; then
-  ilasp_url="https://github.com/marklaw/ILASP-releases/releases/download/v3.4.0/ILASP-3.4.0-ubuntu.tar.gz"
-  clingo_url="https://github.com/potassco/clingo/releases/download/v5.3.0/clingo-5.3.0-linux-x86_64.tar.gz"
+  ilasp_url="https://github.com/marklaw/ILASP-releases/releases/download/v3.6.0/ILASP-3.6.0-ubuntu.tar.gz"
+  clingo_url="https://github.com/potassco/clingo/releases/download/v5.4.0/clingo-5.4.0-linux-x86_64.tar.gz"
 elif [[ "$OSTYPE" == "darwin"* ]]; then
-  ilasp_url="https://github.com/marklaw/ILASP-releases/releases/download/v3.4.0/ILASP-3.4.0-OSX.tar.gz"
-  clingo_url="https://github.com/potassco/clingo/releases/download/v5.3.0/clingo-5.3.0-macos-x86_64.tar.gz"
+  ilasp_url="https://github.com/marklaw/ILASP-releases/releases/download/v3.6.0/ILASP-3.6.0-OSX.tar.gz"
+  clingo_url="https://github.com/potassco/clingo/releases/download/v5.4.0/clingo-5.4.0-macos-x86_64.tar.gz"
 else
   echo "Error: Only Linux and MacOS installations are supported."
   exit
@@ -59,3 +59,4 @@ fi
 if [[ ! -f "${target_install_path}/${clingo_binary}" ]]; then
   install_binary ${clingo_url} ${clingo_tar_file} ${clingo_folder} ${clingo_binary} 1
 fi
+

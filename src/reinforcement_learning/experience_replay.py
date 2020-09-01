@@ -1,9 +1,6 @@
 import collections
 import numpy as np
 
-Experience = collections.namedtuple("Experience", field_names=["state", "action", "next_state", "is_terminal",
-                                                               "observations", "observations_changed"])
-
 
 class ExperienceBuffer:
     def __init__(self, capacity):
@@ -18,3 +15,6 @@ class ExperienceBuffer:
     def sample(self, batch_size):
         indices = np.random.choice(len(self.buffer), batch_size, replace=False)
         return [self.buffer[x] for x in indices]
+
+    def clear(self):
+        self.buffer.clear()
