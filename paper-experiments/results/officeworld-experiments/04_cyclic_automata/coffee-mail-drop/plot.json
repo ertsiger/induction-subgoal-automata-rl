@@ -1,0 +1,54 @@
+[
+    {
+        "label": "Acyclic",
+        "folders": [
+            "../paper-experiments/experiments/officeworld-experiments/04_cyclic_automata/acyclic/batch_1/coffee-mail-drop",
+            "../paper-experiments/experiments/officeworld-experiments/04_cyclic_automata/acyclic/batch_2/coffee-mail-drop",
+            "../paper-experiments/experiments/officeworld-experiments/04_cyclic_automata/acyclic/batch_3/coffee-mail-drop",
+            "../paper-experiments/experiments/officeworld-experiments/04_cyclic_automata/acyclic/batch_4/coffee-mail-drop",
+            "../paper-experiments/experiments/officeworld-experiments/04_cyclic_automata/acyclic/batch_5/coffee-mail-drop",
+            "../paper-experiments/experiments/officeworld-experiments/04_cyclic_automata/acyclic/batch_6/coffee-mail-drop",
+            "../paper-experiments/experiments/officeworld-experiments/04_cyclic_automata/acyclic/batch_7/coffee-mail-drop",
+            "../paper-experiments/experiments/officeworld-experiments/04_cyclic_automata/acyclic/batch_8/coffee-mail-drop",
+            "../paper-experiments/experiments/officeworld-experiments/04_cyclic_automata/acyclic/batch_9/coffee-mail-drop",
+            "../paper-experiments/experiments/officeworld-experiments/04_cyclic_automata/acyclic/batch_10/coffee-mail-drop",
+            "../paper-experiments/experiments/officeworld-experiments/04_cyclic_automata/acyclic/batch_11/coffee-mail-drop",
+            "../paper-experiments/experiments/officeworld-experiments/04_cyclic_automata/acyclic/batch_12/coffee-mail-drop",
+            "../paper-experiments/experiments/officeworld-experiments/04_cyclic_automata/acyclic/batch_13/coffee-mail-drop",
+            "../paper-experiments/experiments/officeworld-experiments/04_cyclic_automata/acyclic/batch_14/coffee-mail-drop",
+            "../paper-experiments/experiments/officeworld-experiments/04_cyclic_automata/acyclic/batch_15/coffee-mail-drop",
+            "../paper-experiments/experiments/officeworld-experiments/04_cyclic_automata/acyclic/batch_16/coffee-mail-drop",
+            "../paper-experiments/experiments/officeworld-experiments/04_cyclic_automata/acyclic/batch_17/coffee-mail-drop",
+            "../paper-experiments/experiments/officeworld-experiments/04_cyclic_automata/acyclic/batch_18/coffee-mail-drop",
+            "../paper-experiments/experiments/officeworld-experiments/04_cyclic_automata/acyclic/batch_19/coffee-mail-drop",
+            "../paper-experiments/experiments/officeworld-experiments/04_cyclic_automata/acyclic/batch_20/coffee-mail-drop"
+        ],
+        "colour": "#228833"
+    },
+    {
+        "label": "Cyclic",
+        "folders": [
+            "../paper-experiments/experiments/officeworld-experiments/04_cyclic_automata/cyclic/batch_1/coffee-mail-drop",
+            "../paper-experiments/experiments/officeworld-experiments/04_cyclic_automata/cyclic/batch_2/coffee-mail-drop",
+            "../paper-experiments/experiments/officeworld-experiments/04_cyclic_automata/cyclic/batch_3/coffee-mail-drop",
+            "../paper-experiments/experiments/officeworld-experiments/04_cyclic_automata/cyclic/batch_4/coffee-mail-drop",
+            "../paper-experiments/experiments/officeworld-experiments/04_cyclic_automata/cyclic/batch_5/coffee-mail-drop",
+            "../paper-experiments/experiments/officeworld-experiments/04_cyclic_automata/cyclic/batch_6/coffee-mail-drop",
+            "../paper-experiments/experiments/officeworld-experiments/04_cyclic_automata/cyclic/batch_7/coffee-mail-drop",
+            "../paper-experiments/experiments/officeworld-experiments/04_cyclic_automata/cyclic/batch_8/coffee-mail-drop",
+            "../paper-experiments/experiments/officeworld-experiments/04_cyclic_automata/cyclic/batch_9/coffee-mail-drop",
+            "../paper-experiments/experiments/officeworld-experiments/04_cyclic_automata/cyclic/batch_10/coffee-mail-drop",
+            "../paper-experiments/experiments/officeworld-experiments/04_cyclic_automata/cyclic/batch_11/coffee-mail-drop",
+            "../paper-experiments/experiments/officeworld-experiments/04_cyclic_automata/cyclic/batch_12/coffee-mail-drop",
+            "../paper-experiments/experiments/officeworld-experiments/04_cyclic_automata/cyclic/batch_13/coffee-mail-drop",
+            "../paper-experiments/experiments/officeworld-experiments/04_cyclic_automata/cyclic/batch_14/coffee-mail-drop",
+            "../paper-experiments/experiments/officeworld-experiments/04_cyclic_automata/cyclic/batch_15/coffee-mail-drop",
+            "../paper-experiments/experiments/officeworld-experiments/04_cyclic_automata/cyclic/batch_16/coffee-mail-drop",
+            "../paper-experiments/experiments/officeworld-experiments/04_cyclic_automata/cyclic/batch_17/coffee-mail-drop",
+            "../paper-experiments/experiments/officeworld-experiments/04_cyclic_automata/cyclic/batch_18/coffee-mail-drop",
+            "../paper-experiments/experiments/officeworld-experiments/04_cyclic_automata/cyclic/batch_19/coffee-mail-drop",
+            "../paper-experiments/experiments/officeworld-experiments/04_cyclic_automata/cyclic/batch_20/coffee-mail-drop"
+        ],
+        "colour": "#EE6677"
+    }
+]

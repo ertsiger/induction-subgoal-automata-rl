@@ -1,0 +1,54 @@
+[
+    {
+        "label": "$\\kappa=1$",
+        "folders": [
+            "../paper-experiments/experiments/officeworld-experiments/01_datasets_and_steps/hrl-officeworld-0-50-250/batch_1/visit-abcd",
+            "../paper-experiments/experiments/officeworld-experiments/01_datasets_and_steps/hrl-officeworld-0-50-250/batch_2/visit-abcd",
+            "../paper-experiments/experiments/officeworld-experiments/01_datasets_and_steps/hrl-officeworld-0-50-250/batch_3/visit-abcd",
+            "../paper-experiments/experiments/officeworld-experiments/01_datasets_and_steps/hrl-officeworld-0-50-250/batch_4/visit-abcd",
+            "../paper-experiments/experiments/officeworld-experiments/01_datasets_and_steps/hrl-officeworld-0-50-250/batch_5/visit-abcd",
+            "../paper-experiments/experiments/officeworld-experiments/01_datasets_and_steps/hrl-officeworld-0-50-250/batch_6/visit-abcd",
+            "../paper-experiments/experiments/officeworld-experiments/01_datasets_and_steps/hrl-officeworld-0-50-250/batch_7/visit-abcd",
+            "../paper-experiments/experiments/officeworld-experiments/01_datasets_and_steps/hrl-officeworld-0-50-250/batch_8/visit-abcd",
+            "../paper-experiments/experiments/officeworld-experiments/01_datasets_and_steps/hrl-officeworld-0-50-250/batch_9/visit-abcd",
+            "../paper-experiments/experiments/officeworld-experiments/01_datasets_and_steps/hrl-officeworld-0-50-250/batch_10/visit-abcd",
+            "../paper-experiments/experiments/officeworld-experiments/01_datasets_and_steps/hrl-officeworld-0-50-250/batch_11/visit-abcd",
+            "../paper-experiments/experiments/officeworld-experiments/01_datasets_and_steps/hrl-officeworld-0-50-250/batch_12/visit-abcd",
+            "../paper-experiments/experiments/officeworld-experiments/01_datasets_and_steps/hrl-officeworld-0-50-250/batch_13/visit-abcd",
+            "../paper-experiments/experiments/officeworld-experiments/01_datasets_and_steps/hrl-officeworld-0-50-250/batch_14/visit-abcd",
+            "../paper-experiments/experiments/officeworld-experiments/01_datasets_and_steps/hrl-officeworld-0-50-250/batch_15/visit-abcd",
+            "../paper-experiments/experiments/officeworld-experiments/01_datasets_and_steps/hrl-officeworld-0-50-250/batch_16/visit-abcd",
+            "../paper-experiments/experiments/officeworld-experiments/01_datasets_and_steps/hrl-officeworld-0-50-250/batch_17/visit-abcd",
+            "../paper-experiments/experiments/officeworld-experiments/01_datasets_and_steps/hrl-officeworld-0-50-250/batch_18/visit-abcd",
+            "../paper-experiments/experiments/officeworld-experiments/01_datasets_and_steps/hrl-officeworld-0-50-250/batch_19/visit-abcd",
+            "../paper-experiments/experiments/officeworld-experiments/01_datasets_and_steps/hrl-officeworld-0-50-250/batch_20/visit-abcd"
+        ],
+        "colour": "#228833"
+    },
+    {
+        "label": "$\\kappa=2$",
+        "folders": [
+            "../paper-experiments/experiments/officeworld-experiments/05_num_disjunctions/d2/batch_1/visit-abcd",
+            "../paper-experiments/experiments/officeworld-experiments/05_num_disjunctions/d2/batch_2/visit-abcd",
+            "../paper-experiments/experiments/officeworld-experiments/05_num_disjunctions/d2/batch_3/visit-abcd",
+            "../paper-experiments/experiments/officeworld-experiments/05_num_disjunctions/d2/batch_4/visit-abcd",
+            "../paper-experiments/experiments/officeworld-experiments/05_num_disjunctions/d2/batch_5/visit-abcd",
+            "../paper-experiments/experiments/officeworld-experiments/05_num_disjunctions/d2/batch_6/visit-abcd",
+            "../paper-experiments/experiments/officeworld-experiments/05_num_disjunctions/d2/batch_7/visit-abcd",
+            "../paper-experiments/experiments/officeworld-experiments/05_num_disjunctions/d2/batch_8/visit-abcd",
+            "../paper-experiments/experiments/officeworld-experiments/05_num_disjunctions/d2/batch_9/visit-abcd",
+            "../paper-experiments/experiments/officeworld-experiments/05_num_disjunctions/d2/batch_10/visit-abcd",
+            "../paper-experiments/experiments/officeworld-experiments/05_num_disjunctions/d2/batch_11/visit-abcd",
+            "../paper-experiments/experiments/officeworld-experiments/05_num_disjunctions/d2/batch_12/visit-abcd",
+            "../paper-experiments/experiments/officeworld-experiments/05_num_disjunctions/d2/batch_13/visit-abcd",
+            "../paper-experiments/experiments/officeworld-experiments/05_num_disjunctions/d2/batch_14/visit-abcd",
+            "../paper-experiments/experiments/officeworld-experiments/05_num_disjunctions/d2/batch_15/visit-abcd",
+            "../paper-experiments/experiments/officeworld-experiments/05_num_disjunctions/d2/batch_16/visit-abcd",
+            "../paper-experiments/experiments/officeworld-experiments/05_num_disjunctions/d2/batch_17/visit-abcd",
+            "../paper-experiments/experiments/officeworld-experiments/05_num_disjunctions/d2/batch_18/visit-abcd",
+            "../paper-experiments/experiments/officeworld-experiments/05_num_disjunctions/d2/batch_19/visit-abcd",
+            "../paper-experiments/experiments/officeworld-experiments/05_num_disjunctions/d2/batch_20/visit-abcd"
+        ],
+        "colour": "#EE6677"
+    }
+]

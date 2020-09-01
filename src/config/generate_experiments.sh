@@ -1,7 +1,8 @@
 #!/usr/bin/env bash
 
 CMD="python -m config.config_generator"
-ROOT_EXPERIMENTS_PATH="/vol/bitbucket/df618"
+PAPER_EXPERIMENTS_PATH=$(dirname $(realpath $0))/../../paper-experiments
+ROOT_EXPERIMENTS_PATH=$PAPER_EXPERIMENTS_PATH/experiments
 NUM_RUNS=20
 
 DEFAULT_OFFICEWORLD_NUM_STEPS=250

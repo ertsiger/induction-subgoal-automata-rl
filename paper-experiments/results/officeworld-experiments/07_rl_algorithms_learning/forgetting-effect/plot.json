@@ -1,0 +1,17 @@
+[
+    {
+        "label": "HRL",
+        "folders": [
+            "../paper-experiments/experiments/officeworld-experiments/07_rl_algorithms_learning/hrl-not-guided/batch_11/coffee"
+        ],
+        "colour": "#4477AA"
+    },
+    {
+        "label": "QRM",
+        "folders": [
+            "../paper-experiments/experiments/officeworld-experiments/07_rl_algorithms_learning/qrm-not-guided/batch_14/coffee"
+        ],
+        "colour": "#EE6677"
+    }
+]
+

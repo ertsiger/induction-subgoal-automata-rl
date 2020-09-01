@@ -1,0 +1,54 @@
+[
+    {
+        "label": "All",
+        "folders": [
+            "../paper-experiments/experiments/officeworld-experiments/01_datasets_and_steps/hrl-officeworld-0-50-250/batch_1/coffee",
+            "../paper-experiments/experiments/officeworld-experiments/01_datasets_and_steps/hrl-officeworld-0-50-250/batch_2/coffee",
+            "../paper-experiments/experiments/officeworld-experiments/01_datasets_and_steps/hrl-officeworld-0-50-250/batch_3/coffee",
+            "../paper-experiments/experiments/officeworld-experiments/01_datasets_and_steps/hrl-officeworld-0-50-250/batch_4/coffee",
+            "../paper-experiments/experiments/officeworld-experiments/01_datasets_and_steps/hrl-officeworld-0-50-250/batch_5/coffee",
+            "../paper-experiments/experiments/officeworld-experiments/01_datasets_and_steps/hrl-officeworld-0-50-250/batch_6/coffee",
+            "../paper-experiments/experiments/officeworld-experiments/01_datasets_and_steps/hrl-officeworld-0-50-250/batch_7/coffee",
+            "../paper-experiments/experiments/officeworld-experiments/01_datasets_and_steps/hrl-officeworld-0-50-250/batch_8/coffee",
+            "../paper-experiments/experiments/officeworld-experiments/01_datasets_and_steps/hrl-officeworld-0-50-250/batch_9/coffee",
+            "../paper-experiments/experiments/officeworld-experiments/01_datasets_and_steps/hrl-officeworld-0-50-250/batch_10/coffee",
+            "../paper-experiments/experiments/officeworld-experiments/01_datasets_and_steps/hrl-officeworld-0-50-250/batch_11/coffee",
+            "../paper-experiments/experiments/officeworld-experiments/01_datasets_and_steps/hrl-officeworld-0-50-250/batch_12/coffee",
+            "../paper-experiments/experiments/officeworld-experiments/01_datasets_and_steps/hrl-officeworld-0-50-250/batch_13/coffee",
+            "../paper-experiments/experiments/officeworld-experiments/01_datasets_and_steps/hrl-officeworld-0-50-250/batch_14/coffee",
+            "../paper-experiments/experiments/officeworld-experiments/01_datasets_and_steps/hrl-officeworld-0-50-250/batch_15/coffee",
+            "../paper-experiments/experiments/officeworld-experiments/01_datasets_and_steps/hrl-officeworld-0-50-250/batch_16/coffee",
+            "../paper-experiments/experiments/officeworld-experiments/01_datasets_and_steps/hrl-officeworld-0-50-250/batch_17/coffee",
+            "../paper-experiments/experiments/officeworld-experiments/01_datasets_and_steps/hrl-officeworld-0-50-250/batch_18/coffee",
+            "../paper-experiments/experiments/officeworld-experiments/01_datasets_and_steps/hrl-officeworld-0-50-250/batch_19/coffee",
+            "../paper-experiments/experiments/officeworld-experiments/01_datasets_and_steps/hrl-officeworld-0-50-250/batch_20/coffee"
+        ],
+        "colour": "#228833"
+    },
+    {
+        "label": "Restricted",
+        "folders": [
+            "../paper-experiments/experiments/officeworld-experiments/02_restricted_observables/batch_1/coffee",
+            "../paper-experiments/experiments/officeworld-experiments/02_restricted_observables/batch_2/coffee",
+            "../paper-experiments/experiments/officeworld-experiments/02_restricted_observables/batch_3/coffee",
+            "../paper-experiments/experiments/officeworld-experiments/02_restricted_observables/batch_4/coffee",
+            "../paper-experiments/experiments/officeworld-experiments/02_restricted_observables/batch_5/coffee",
+            "../paper-experiments/experiments/officeworld-experiments/02_restricted_observables/batch_6/coffee",
+            "../paper-experiments/experiments/officeworld-experiments/02_restricted_observables/batch_7/coffee",
+            "../paper-experiments/experiments/officeworld-experiments/02_restricted_observables/batch_8/coffee",
+            "../paper-experiments/experiments/officeworld-experiments/02_restricted_observables/batch_9/coffee",
+            "../paper-experiments/experiments/officeworld-experiments/02_restricted_observables/batch_10/coffee",
+            "../paper-experiments/experiments/officeworld-experiments/02_restricted_observables/batch_11/coffee",
+            "../paper-experiments/experiments/officeworld-experiments/02_restricted_observables/batch_12/coffee",
+            "../paper-experiments/experiments/officeworld-experiments/02_restricted_observables/batch_13/coffee",
+            "../paper-experiments/experiments/officeworld-experiments/02_restricted_observables/batch_14/coffee",
+            "../paper-experiments/experiments/officeworld-experiments/02_restricted_observables/batch_15/coffee",
+            "../paper-experiments/experiments/officeworld-experiments/02_restricted_observables/batch_16/coffee",
+            "../paper-experiments/experiments/officeworld-experiments/02_restricted_observables/batch_17/coffee",
+            "../paper-experiments/experiments/officeworld-experiments/02_restricted_observables/batch_18/coffee",
+            "../paper-experiments/experiments/officeworld-experiments/02_restricted_observables/batch_19/coffee",
+            "../paper-experiments/experiments/officeworld-experiments/02_restricted_observables/batch_20/coffee"
+        ],
+        "colour": "#EE6677"
+    }
+]

@@ -84,7 +84,8 @@ get_plot_name() {
   fi
 }
 
-BASE_DIR="/data/Software/learning-automata-rl/results_config/jmlr"
+PAPER_EXPERIMENTS_PATH=$(dirname $(realpath $0))/../../paper-experiments
+BASE_DIR=$PAPER_EXPERIMENTS_PATH/results
 PLOT_CMD="python -m plot_utils.plot_curves"
 STATS_CMD="python -m result_processing.collect_stats"
 NUM_RUNS=20

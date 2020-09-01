@@ -1,0 +1,54 @@
+[
+    {
+        "label": "$\\kappa=1$",
+        "folders": [
+            "../paper-experiments/experiments/officeworld-experiments/05_num_disjunctions/d1/batch_1/coffee-or-mail",
+            "../paper-experiments/experiments/officeworld-experiments/05_num_disjunctions/d1/batch_2/coffee-or-mail",
+            "../paper-experiments/experiments/officeworld-experiments/05_num_disjunctions/d1/batch_3/coffee-or-mail",
+            "../paper-experiments/experiments/officeworld-experiments/05_num_disjunctions/d1/batch_4/coffee-or-mail",
+            "../paper-experiments/experiments/officeworld-experiments/05_num_disjunctions/d1/batch_5/coffee-or-mail",
+            "../paper-experiments/experiments/officeworld-experiments/05_num_disjunctions/d1/batch_6/coffee-or-mail",
+            "../paper-experiments/experiments/officeworld-experiments/05_num_disjunctions/d1/batch_7/coffee-or-mail",
+            "../paper-experiments/experiments/officeworld-experiments/05_num_disjunctions/d1/batch_8/coffee-or-mail",
+            "../paper-experiments/experiments/officeworld-experiments/05_num_disjunctions/d1/batch_9/coffee-or-mail",
+            "../paper-experiments/experiments/officeworld-experiments/05_num_disjunctions/d1/batch_10/coffee-or-mail",
+            "../paper-experiments/experiments/officeworld-experiments/05_num_disjunctions/d1/batch_11/coffee-or-mail",
+            "../paper-experiments/experiments/officeworld-experiments/05_num_disjunctions/d1/batch_12/coffee-or-mail",
+            "../paper-experiments/experiments/officeworld-experiments/05_num_disjunctions/d1/batch_13/coffee-or-mail",
+            "../paper-experiments/experiments/officeworld-experiments/05_num_disjunctions/d1/batch_14/coffee-or-mail",
+            "../paper-experiments/experiments/officeworld-experiments/05_num_disjunctions/d1/batch_15/coffee-or-mail",
+            "../paper-experiments/experiments/officeworld-experiments/05_num_disjunctions/d1/batch_16/coffee-or-mail",
+            "../paper-experiments/experiments/officeworld-experiments/05_num_disjunctions/d1/batch_17/coffee-or-mail",
+            "../paper-experiments/experiments/officeworld-experiments/05_num_disjunctions/d1/batch_18/coffee-or-mail",
+            "../paper-experiments/experiments/officeworld-experiments/05_num_disjunctions/d1/batch_19/coffee-or-mail",
+            "../paper-experiments/experiments/officeworld-experiments/05_num_disjunctions/d1/batch_20/coffee-or-mail"
+        ],
+        "colour": "#228833"
+    },
+    {
+        "label": "$\\kappa=2$",
+        "folders": [
+            "../paper-experiments/experiments/officeworld-experiments/05_num_disjunctions/d2/batch_1/coffee-or-mail",
+            "../paper-experiments/experiments/officeworld-experiments/05_num_disjunctions/d2/batch_2/coffee-or-mail",
+            "../paper-experiments/experiments/officeworld-experiments/05_num_disjunctions/d2/batch_3/coffee-or-mail",
+            "../paper-experiments/experiments/officeworld-experiments/05_num_disjunctions/d2/batch_4/coffee-or-mail",
+            "../paper-experiments/experiments/officeworld-experiments/05_num_disjunctions/d2/batch_5/coffee-or-mail",
+            "../paper-experiments/experiments/officeworld-experiments/05_num_disjunctions/d2/batch_6/coffee-or-mail",
+            "../paper-experiments/experiments/officeworld-experiments/05_num_disjunctions/d2/batch_7/coffee-or-mail",
+            "../paper-experiments/experiments/officeworld-experiments/05_num_disjunctions/d2/batch_8/coffee-or-mail",
+            "../paper-experiments/experiments/officeworld-experiments/05_num_disjunctions/d2/batch_9/coffee-or-mail",
+            "../paper-experiments/experiments/officeworld-experiments/05_num_disjunctions/d2/batch_10/coffee-or-mail",
+            "../paper-experiments/experiments/officeworld-experiments/05_num_disjunctions/d2/batch_11/coffee-or-mail",
+            "../paper-experiments/experiments/officeworld-experiments/05_num_disjunctions/d2/batch_12/coffee-or-mail",
+            "../paper-experiments/experiments/officeworld-experiments/05_num_disjunctions/d2/batch_13/coffee-or-mail",
+            "../paper-experiments/experiments/officeworld-experiments/05_num_disjunctions/d2/batch_14/coffee-or-mail",
+            "../paper-experiments/experiments/officeworld-experiments/05_num_disjunctions/d2/batch_15/coffee-or-mail",
+            "../paper-experiments/experiments/officeworld-experiments/05_num_disjunctions/d2/batch_16/coffee-or-mail",
+            "../paper-experiments/experiments/officeworld-experiments/05_num_disjunctions/d2/batch_17/coffee-or-mail",
+            "../paper-experiments/experiments/officeworld-experiments/05_num_disjunctions/d2/batch_18/coffee-or-mail",
+            "../paper-experiments/experiments/officeworld-experiments/05_num_disjunctions/d2/batch_19/coffee-or-mail",
+            "../paper-experiments/experiments/officeworld-experiments/05_num_disjunctions/d2/batch_20/coffee-or-mail"
+        ],
+        "colour": "#EE6677"
+    }
+]
