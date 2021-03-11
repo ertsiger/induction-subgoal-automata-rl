@@ -1,5 +1,5 @@
 # Induction of Subgoal Automata for Reinforcement Learning
-Implementation of the ISA (Induction of Subgoal Automata) algorithm presented in [[Furelos-Blanco et al., 2020a]](#references) and [[Furelos-Blanco et al., 2020b]](#references).
+Implementation of the ISA (Induction of Subgoal Automata) algorithm presented in [[Furelos-Blanco et al., 2020]](#references) and [[Furelos-Blanco et al., 2021]](#references).
 
 1. [Installation](#installation)
     1. [Install Python packages](#install-python)
@@ -253,6 +253,6 @@ if you want to test the method with some specific experiments.
 
 ## <a name="references"></a>References
 * Toro Icarte, R.; Klassen, T. Q.; Valenzano, R. A.; and McIlraith, S. A. 2018. [_Using Reward Machines for High-Level Task Specification and Decomposition in Reinforcement Learning_](http://proceedings.mlr.press/v80/icarte18a.html). Proceedings of the 35th International Conference on Machine Learning.
-* Furelos-Blanco, D.; Law, M.; Russo, A.; Broda, K.; and Jonsson, A. 2020a. [_Induction of Subgoal Automata for Reinforcement Learning_](https://doi.org/10.1609/aaai.v34i04.5802). Proceedings of the 34th AAAI Conference on Artificial Intelligence.
-* Furelos-Blanco, D.; Law, M.; Jonsson, A.; Broda, K.; and Russo, A. 2020b. [_Induction and Exploitation of Subgoal Automata for Reinforcement Learning_](https://arxiv.org/abs/2009.03855). Preprint.
+* Furelos-Blanco, D.; Law, M.; Russo, A.; Broda, K.; and Jonsson, A. 2020. [_Induction of Subgoal Automata for Reinforcement Learning_](https://doi.org/10.1609/aaai.v34i04.5802). Proceedings of the 34th AAAI Conference on Artificial Intelligence.
+* Furelos-Blanco, D.; Law, M.; Jonsson, A.; Broda, K.; and Russo, A. 2021. [_Induction and Exploitation of Subgoal Automata for Reinforcement Learning_](https://jair.org/index.php/jair/article/view/12372). J. Artif. Intell. Res., 70, 1031-1116.
 
