@@ -4,6 +4,7 @@ Implementation of the ISA (Induction of Subgoal Automata) algorithm presented in
 1. [Installation](#installation)
     1. [Install Python packages](#install-python)
     1. [Install `ILASP` and `clingo` binaries](#install-ilasp-clingo)
+    1. [Install Graphviz](#install-graphviz)
 1. [Run the algorithm](#run-isa)
 1. [Generation of configuration files](#config-file-generator)
 1. [Plot the learning curves](#plot-results)
@@ -12,7 +13,7 @@ Implementation of the ISA (Induction of Subgoal Automata) algorithm presented in
 1. [References](#references)
 
 ## <a name="installation"></a>Installation
-The code only runs on Linux or MacOS computers with Python 3. Firstly, you have to download the repository which can be
+The code only runs on Linux or MacOS (Intel) computers with Python 3. Firstly, you have to download the repository which can be
 done with the following command.
 ```
 git clone https://github.com/ertsiger/induction-subgoal-automata-rl.git
@@ -44,6 +45,9 @@ to download the binaries from the following websites and then copy the
 
 Alternatively, you can run the `install_binaries.sh`, which will
 download  and put the files in the `bin` folder for you.
+
+### <a name="install-graphviz"></a> Install Graphviz
+The learned subgoal automata are exported to `.png` using Graphviz. You can follow the instructions in the [official webpage](https://graphviz.org/download/) to install it.
 
 ## <a name="running-isa"></a>Running the algorithm
 The ISA algorithm can be executed easily by running the `run_isa.py` script:
