@@ -5,7 +5,7 @@ Implementation of the ISA (Induction of Subgoal Automata) algorithm presented in
     1. [Install Python packages](#install-python)
     1. [Install `ILASP` and `clingo` binaries](#install-ilasp-clingo)
     1. [Install Graphviz](#install-graphviz)
-1. [Run the algorithm](#run-isa)
+1. [Run the algorithm](#running-isa)
 1. [Generation of configuration files](#config-file-generator)
 1. [Plot the learning curves](#plot-results)
 1. [Collect learning statistics](#collect-stats)
