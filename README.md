@@ -4,7 +4,7 @@ Implementation of the ISA (Induction of Subgoal Automata) algorithm presented in
 1. [Installation](#installation)
     1. [Install Python packages](#install-python)
     1. [Install `ILASP` and `clingo` binaries](#install-ilasp-clingo)
-    1. [Install Graphviz](#install-graphviz)
+    1. [Install additional dependencies](#install-additional-dependencies)
 1. [Run the algorithm](#running-isa)
 1. [Generation of configuration files](#config-file-generator)
 1. [Plot the learning curves](#plot-results)
@@ -13,7 +13,7 @@ Implementation of the ISA (Induction of Subgoal Automata) algorithm presented in
 1. [References](#references)
 
 ## <a name="installation"></a>Installation
-The code only runs on Linux or MacOS (Intel) computers with Python 3. Firstly, you have to download the repository which can be
+The code only runs on Linux or MacOS computers with Python 3. Firstly, you have to download the repository which can be
 done with the following command.
 ```
 git clone https://github.com/ertsiger/induction-subgoal-automata-rl.git
@@ -44,10 +44,21 @@ to download the binaries from the following websites and then copy the
 * [clingo 5.4.0](https://github.com/potassco/clingo/releases/tag/v5.4.0)
 
 Alternatively, you can run the `install_binaries.sh`, which will
-download  and put the files in the `bin` folder for you.
+download and put the files in the `bin` folder for you. If you are using MacOS, you may need to install `wget` first using `brew install wget`.
+```
+cd induction-subgoal-automata-rl
+./install_binaries.sh
+```
 
-### <a name="install-graphviz"></a> Install Graphviz
+### <a name="install-additional-dependencies"></a> Install additional dependencies
+#### Graphviz
 The learned subgoal automata are exported to `.png` using Graphviz. You can follow the instructions in the [official webpage](https://graphviz.org/download/) to install it.
+
+#### MacOS dependencies
+The code invoking `ILASP` relies on the `timeout` command, which is not available by default in MacOS systems. To install it, you can run:
+```
+brew install coreutils
+```
 
 ## <a name="running-isa"></a>Running the algorithm
 The ISA algorithm can be executed easily by running the `run_isa.py` script:
