@@ -34,7 +34,8 @@ Note that one of the requirements is the package in the `gym-subgoal-automata` r
 We use the environments implemented in that repository. 
 
 We recommend you to use a [virtual environment](https://docs.python.org/3/tutorial/venv.html) 
-since the requirements of our installation may affect your current installation.
+since the requirements of our installation may affect your current installation. In our case, we used an Anaconda3
+installation and created an environment with Python 3.6.9.
 
 ### <a name="install-ilasp-clingo"></a> Install `ILASP` and `clingo` binaries
 The cloned repository does not include the binaries for the ILASP inductive logic programming system. Therefore, you have
@@ -53,6 +54,13 @@ cd induction-subgoal-automata-rl
 ### <a name="install-additional-dependencies"></a> Install additional dependencies
 #### Graphviz
 The learned subgoal automata are exported to `.png` using Graphviz. You can follow the instructions in the [official webpage](https://graphviz.org/download/) to install it.
+
+#### SDL2
+When installing the Python packages, you may experience the error `fatal error: 'SDL.h' file not found`. To resolve this, you must install SDL2 (Simple Direct Media Layer 2):
+* Ubuntu [[link](https://stackoverflow.com/questions/10488775/sdl-h-no-such-file-or-directory-found-when-compiling)]: `sudo apt-get install libsdl2-dev`
+* MacOS [[link](https://stackoverflow.com/questions/45992243/pip-install-pygame-sdl-h-file-not-found)]: `brew install sdl sdl_image sdl_mixer sdl_ttf portmidi`
+
+If you use a Conda environment, the following command can also be used to avoid a system-wide installation: `conda install -c conda-forge sdl2` [[link](https://anaconda.org/conda-forge/sdl2)].
 
 #### MacOS dependencies
 The code invoking `ILASP` relies on the `timeout` command, which is not available by default in MacOS systems. To install it, you can run:
