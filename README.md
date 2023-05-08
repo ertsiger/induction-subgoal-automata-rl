@@ -20,7 +20,7 @@ git clone https://github.com/ertsiger/induction-subgoal-automata-rl.git
 ```
 
 The following subsections describe the steps for installing the required [Python packages](#install-python) and the [binaries](#install-ilasp-clingo) related to the
-Inductive Logic Programming system.
+Inductive Logic Programming system we use to learn the automata. Other dependencies you may need to install are listed [here](#install-additional-dependencies).
 
 ### <a name="install-python"></a> Install Python packages
 To install the required Python packages to run our code, you can use `pip` with the following command:
@@ -56,7 +56,7 @@ cd induction-subgoal-automata-rl
 The learned subgoal automata are exported to `.png` using Graphviz. You can follow the instructions in the [official webpage](https://graphviz.org/download/) to install it.
 
 #### SDL2
-When installing the Python packages, you may experience the error `fatal error: 'SDL.h' file not found`. To resolve this, you must install SDL2 (Simple Direct Media Layer 2):
+When installing the [Python packages](#install-python), you may experience the error `fatal error: 'SDL.h' file not found`. To resolve this, you must install SDL2 (Simple Direct Media Layer 2):
 * Ubuntu [[link](https://stackoverflow.com/questions/10488775/sdl-h-no-such-file-or-directory-found-when-compiling)]: `sudo apt-get install libsdl2-dev`
 * MacOS [[link](https://stackoverflow.com/questions/45992243/pip-install-pygame-sdl-h-file-not-found)]: `brew install sdl sdl_image sdl_mixer sdl_ttf portmidi`
 
