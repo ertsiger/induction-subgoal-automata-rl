@@ -10,6 +10,7 @@ Implementation of the ISA (Induction of Subgoal Automata) algorithm presented in
 1. [Plot the learning curves](#plot-results)
 1. [Collect learning statistics](#collect-stats)
 1. [Reproducibility of the paper results](#result-reproducibility)
+1. [Citation](#citation)
 1. [References](#references)
 
 ## <a name="installation"></a>Installation
@@ -273,6 +274,23 @@ RL algorithms are evaluated in `OfficeWorld`.
 
 Since it is costly to run all these experiments, we recommend you to use the configuration generator introduced [here](#config-file-generator)
 if you want to test the method with some specific experiments.
+
+## <a name="citation"></a>Citation
+If you find this repository useful in your work, please use the following citation:
+```
+@article{FurelosBlancoLJBR21,
+  author       = {Daniel Furelos{-}Blanco and
+                  Mark Law and
+                  Anders Jonsson and
+                  Krysia Broda and
+                  Alessandra Russo},
+  title        = {{Induction and Exploitation of Subgoal Automata for Reinforcement Learning}},
+  journal      = {J. Artif. Intell. Res.},
+  volume       = {70},
+  pages        = {1031--1116},
+  year         = {2021}
+}
+```
 
 ## <a name="references"></a>References
 * Toro Icarte, R.; Klassen, T. Q.; Valenzano, R. A.; and McIlraith, S. A. 2018. [_Using Reward Machines for High-Level Task Specification and Decomposition in Reinforcement Learning_](http://proceedings.mlr.press/v80/icarte18a.html). Proceedings of the 35th International Conference on Machine Learning.
