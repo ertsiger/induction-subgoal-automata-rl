@@ -84,6 +84,48 @@ get_plot_name() {
   fi
 }
 
+get_learning_episodes_compression() {
+  if [ "$1" = "coffee" ]; then
+    echo 15
+  elif [ "$1" = "coffee-mail" ]; then
+    echo 30
+  elif [ "$1" = "visit-abcd" ]; then
+    echo 100
+  elif [ "$1" = "coffee-drop" ]; then
+    echo 15
+  elif [ "$1" = "coffee-mail-drop" ]; then
+    echo 30
+  elif [ "$1" = "coffee-or-mail" ]; then
+    echo 15
+  elif [ "$1" = "make-plank" ]; then
+    echo 125
+  elif [ "$1" = "make-stick" ]; then
+    echo 125
+  elif [ "$1" = "make-cloth" ]; then
+    echo 125
+  elif [ "$1" = "make-rope" ]; then
+    echo 125
+  elif [ "$1" = "make-shears" ]; then
+    echo 125
+  elif [ "$1" = "make-bridge" ]; then
+    echo 125
+  elif [ "$1" = "make-bed" ]; then
+    echo 125
+  elif [ "$1" = "make-axe" ]; then
+    echo 125
+  elif [ "$1" = "get-gold" ]; then
+    echo 125
+  elif [ "$1" = "get-gem" ]; then
+    echo 125
+  elif [ "$1" = "water-rgb" ]; then
+    echo 625
+  elif [ "$1" = "water-rg-b" ]; then
+    echo 625
+  elif [ "$1" = "water-rgbc" ]; then
+    echo 625
+  fi
+}
+
 PAPER_EXPERIMENTS_PATH=$(dirname $(realpath $0))/../../paper-experiments
 BASE_DIR=$PAPER_EXPERIMENTS_PATH/results
 PLOT_CMD="python -m plot_utils.plot_curves"
@@ -144,7 +186,8 @@ get_interleaving_rl_algorithms_experiment_results() {
     then
       num_episodes=$(get_num_episodes $task)
       plot_name=$(get_plot_name $task)
-      $PLOT_CMD $folder/plot.json $dataset_size $NUM_RUNS $num_episodes -g --greedy_evaluation_frequency $greedy_evaluation_frequency --max_episode_length $max_episode_length --use_tex -w $window_size -t "\textsc{$plot_name}"
+      compression=$(get_learning_episodes_compression $task)
+      $PLOT_CMD $folder/plot.json $dataset_size $NUM_RUNS $num_episodes -g --greedy_evaluation_frequency $greedy_evaluation_frequency --max_episode_length $max_episode_length --use_tex -w $window_size -t "\textsc{$plot_name}" --learning_ep_compression $compression
       $STATS_CMD $folder/stats.json $folder/stats_out.json
     fi
   done
@@ -165,8 +208,9 @@ get_handcrafted_automata_experiment_results() {
     then
       num_episodes=$(get_num_episodes $task)
       plot_name=$(get_plot_name $task)
-      $PLOT_CMD $folder/plot_hrl.json $dataset_size $NUM_RUNS $num_episodes -g --greedy_evaluation_frequency $greedy_evaluation_frequency --max_episode_length $max_episode_length --use_tex -w $window_size -t "\textsc{$plot_name}"
-      $PLOT_CMD $folder/plot_qrm.json $dataset_size $NUM_RUNS $num_episodes -g --greedy_evaluation_frequency $greedy_evaluation_frequency --max_episode_length $max_episode_length --use_tex -w $window_size -t "\textsc{$plot_name}"
+      compression=$(get_learning_episodes_compression $task)
+      $PLOT_CMD $folder/plot_hrl.json $dataset_size $NUM_RUNS $num_episodes -g --greedy_evaluation_frequency $greedy_evaluation_frequency --max_episode_length $max_episode_length --use_tex -w $window_size -t "\textsc{$plot_name}" --learning_ep_compression $compression
+      $PLOT_CMD $folder/plot_qrm.json $dataset_size $NUM_RUNS $num_episodes -g --greedy_evaluation_frequency $greedy_evaluation_frequency --max_episode_length $max_episode_length --use_tex -w $window_size -t "\textsc{$plot_name}" --learning_ep_compression $compression
     fi
   done
 }
@@ -183,7 +227,8 @@ get_officeworld_dataset_and_steps_experiment_results() {
         input_file=$plot_folder/d$dataset-$num_tasks.json
         num_episodes=$(get_num_episodes $task)
         plot_name=$(get_plot_name $task)
-        $PLOT_CMD $input_file $num_tasks $NUM_RUNS $num_episodes -g --use_tex -w 1 -t "\textsc{$plot_name} (\$\mathcal{D}^{$num_tasks}_{$dataset}\$)"
+        compression=$(get_learning_episodes_compression $task)
+        $PLOT_CMD $input_file $num_tasks $NUM_RUNS $num_episodes -g --use_tex -w 1 -t "\textsc{$plot_name} (\$\mathbb{I}^{$num_tasks}_{$dataset}\$)" --learning_ep_compression $compression
       done
     done
     $STATS_CMD $folder/stats.json $folder/stats_out.json

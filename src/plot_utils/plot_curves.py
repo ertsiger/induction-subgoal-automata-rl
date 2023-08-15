@@ -40,19 +40,29 @@ def read_automaton_learning_episodes(filename):
     return automaton_learning_episodes.squeeze().to_numpy()
 
 
-def plot_curve(figure_id, num_episodes, moving_avg, learning_episodes, colour, label):
+def get_compressed_learning_episodes(learning_episodes, max_diff):
+    new_episodes = []
+    for ep in learning_episodes:
+        if len(new_episodes) == 0 or (ep - new_episodes[-1]) >= max_diff:
+            new_episodes.append(ep)
+    return new_episodes
+
+
+def plot_curve(figure_id, num_episodes, moving_avg, learning_episodes, learning_ep_compression, colour, label):
     plt.figure(figure_id)
     x_axis = range(1, num_episodes + 1)
     plt.plot(x_axis, moving_avg, color=colour, label=label)
 
-    for vl in learning_episodes:
+    for vl in get_compressed_learning_episodes(sorted(learning_episodes), learning_ep_compression):
         if vl <= num_episodes:
             plt.axvline(x=vl, alpha=0.35, color=colour, dashes=(1, 2), zorder=-1000)
 
 
-def plot_single_task_curve(figure_id, num_episodes, items, learning_episodes, colour, label, window_size):
+def plot_single_task_curve(
+    figure_id, num_episodes, items, learning_episodes, learning_ep_compression, colour, label, window_size
+):
     moving_avg, _ = moving_average(items, window_size)
-    plot_curve(figure_id, num_episodes, moving_avg, learning_episodes, colour, label)
+    plot_curve(figure_id, num_episodes, moving_avg, learning_episodes, learning_ep_compression, colour, label)
 
 
 def save_reward_plot(figure_id, task_id, plot_title, output_filename_base, output_path):
@@ -60,7 +70,7 @@ def save_reward_plot(figure_id, task_id, plot_title, output_filename_base, outpu
     if plot_title is not None:
         plt.title(plot_title, fontsize=26)
     plt.xlabel("Number of episodes", fontsize=26)
-    plt.ylabel("Average reward", fontsize=26)
+    plt.ylabel("Average return", fontsize=26)
     plt.xticks(fontsize=26)
     plt.yticks(fontsize=26)
     plt.ylim((0, REWARD_IF_GOAL + 0.1))
@@ -135,8 +145,10 @@ def get_reward_steps_sums_for_setting(task_id, setting, max_episode_length, use_
     return task_rewards, task_steps, task_automaton_learning_episodes
 
 
-def process_tasks(config_obj, num_tasks, num_runs, num_episodes, max_episode_length, use_greedy_traces, greedy_evaluation_frequency,
-                  plot_task_curves, window_size, plot_title, output_filename_base, output_path):
+def process_tasks(
+    config_obj, num_tasks, num_runs, num_episodes, max_episode_length, use_greedy_traces, greedy_evaluation_frequency,
+    plot_task_curves, window_size, plot_title, learning_ep_compression, output_filename_base, output_path
+):
     reward_fig_id, steps_fig_id = 0, 1
     total_rewards_sum, total_steps_sum, total_automaton_learning_episodes = init_total_rewards_steps(config_obj, num_episodes)
 
@@ -146,15 +158,23 @@ def process_tasks(config_obj, num_tasks, num_runs, num_episodes, max_episode_len
 
         for setting in config_obj:
             setting_label = setting[CONFIG_LABEL_ATTR]
-            task_rewards, task_steps, task_automaton_learning_episodes = get_reward_steps_sums_for_setting(task_id, setting, max_episode_length, use_greedy_traces, greedy_evaluation_frequency)
+            task_rewards, task_steps, task_automaton_learning_episodes = get_reward_steps_sums_for_setting(
+                task_id, setting, max_episode_length, use_greedy_traces, greedy_evaluation_frequency
+            )
 
             total_rewards_sum[setting_label] += task_rewards
             total_steps_sum[setting_label] += task_steps
             total_automaton_learning_episodes[setting_label].update(task_automaton_learning_episodes)
 
             if plot_task_curves:
-                plot_single_task_curve(reward_fig_id, num_episodes, task_rewards / num_runs, task_automaton_learning_episodes, setting[CONFIG_COLOUR_ATTR], setting_label, window_size)
-                plot_single_task_curve(steps_fig_id, num_episodes, task_steps / num_runs, task_automaton_learning_episodes, setting[CONFIG_COLOUR_ATTR], setting_label, window_size)
+                plot_single_task_curve(
+                    reward_fig_id, num_episodes, task_rewards / num_runs, task_automaton_learning_episodes,
+                    learning_ep_compression, setting[CONFIG_COLOUR_ATTR], setting_label, window_size
+                )
+                plot_single_task_curve(
+                    steps_fig_id, num_episodes, task_steps / num_runs, task_automaton_learning_episodes,
+                    learning_ep_compression, setting[CONFIG_COLOUR_ATTR], setting_label, window_size
+                )
 
         if plot_task_curves:
             save_reward_plot(reward_fig_id, task_id, plot_title, output_filename_base, output_path)
@@ -165,8 +185,10 @@ def process_tasks(config_obj, num_tasks, num_runs, num_episodes, max_episode_len
     return total_rewards_sum, total_steps_sum, total_automaton_learning_episodes
 
 
-def plot_average_task_curves(config_obj, num_tasks, num_runs, max_episode_length, window_size, plot_title, total_rewards_sum,
-                             total_steps_sum, total_automaton_learning_episodes, output_filename_base, output_path):
+def plot_average_task_curves(
+    config_obj, num_tasks, num_runs, max_episode_length, window_size, plot_title, learning_ep_compression,
+    total_rewards_sum, total_steps_sum, total_automaton_learning_episodes, output_filename_base, output_path
+):
     reward_fig_id, steps_fig_id = 0, 1
     reward_fig, steps_fig = plt.figure(reward_fig_id), plt.figure(steps_fig_id)
     for setting in config_obj:
@@ -177,8 +199,14 @@ def plot_average_task_curves(config_obj, num_tasks, num_runs, max_episode_length
         reward_mean, _ = moving_average(reward_mean, window_size)
         steps_mean, _ = moving_average(steps_mean, window_size)
 
-        plot_curve(reward_fig_id, num_episodes, reward_mean, total_automaton_learning_episodes[setting_label], setting[CONFIG_COLOUR_ATTR], setting_label)
-        plot_curve(steps_fig_id, num_episodes, steps_mean, total_automaton_learning_episodes[setting_label], setting[CONFIG_COLOUR_ATTR], setting_label)
+        plot_curve(
+            reward_fig_id, num_episodes, reward_mean, total_automaton_learning_episodes[setting_label],
+            learning_ep_compression, setting[CONFIG_COLOUR_ATTR], setting_label
+        )
+        plot_curve(
+            steps_fig_id, num_episodes, steps_mean, total_automaton_learning_episodes[setting_label],
+            learning_ep_compression, setting[CONFIG_COLOUR_ATTR], setting_label
+        )
 
     save_reward_plot(reward_fig_id, "avg", plot_title, output_filename_base, output_path)
     save_steps_plot(steps_fig_id, "avg", plot_title, max_episode_length, output_filename_base, output_path)
@@ -200,6 +228,7 @@ def create_argparser():
     parser.add_argument("--use_tex", action="store_true", help="whether to plot the strings using TeX")
     parser.add_argument("--window_size", "-w", type=int, default=10, help="size of the averaging window")
     parser.add_argument("--plot_title", "-t", default=None, help="the title of the plot")
+    parser.add_argument("--learning_ep_compression", type=int, default=0, help="number of automaton learning episodes to compress in one")
     return parser
 
 
@@ -208,16 +237,18 @@ if __name__ == "__main__":
 
     plt.rc('text', usetex=args.use_tex)
     plt.rc('font', family='serif')
+    plt.rc('text.latex', preamble=r'\usepackage{amsfonts}')
 
     num_tasks, num_runs, num_episodes = args.num_tasks, args.num_runs, args.num_episodes
     config_obj = read_json_file(args.config)
     output_filename_base, output_path = os.path.basename(args.config)[:-len(".json")], os.path.abspath(os.path.dirname(args.config))
-    total_rewards_sum, total_steps_sum, total_automaton_learning_episodes = process_tasks(config_obj, num_tasks, num_runs,
-                                                                                          num_episodes, args.max_episode_length,
-                                                                                          args.use_greedy_traces, args.greedy_evaluation_frequency,
-                                                                                          args.plot_task_curves,
-                                                                                          args.window_size, args.plot_title,
-                                                                                          output_filename_base, output_path)
-    plot_average_task_curves(config_obj, num_tasks, num_runs, args.max_episode_length, args.window_size, args.plot_title,
-                             total_rewards_sum, total_steps_sum, total_automaton_learning_episodes, output_filename_base,
-                             output_path)
+    total_rewards_sum, total_steps_sum, total_automaton_learning_episodes = process_tasks(
+        config_obj, num_tasks, num_runs, num_episodes, args.max_episode_length, args.use_greedy_traces,
+        args.greedy_evaluation_frequency, args.plot_task_curves, args.window_size, args.plot_title,
+        args.learning_ep_compression, output_filename_base, output_path
+    )
+    plot_average_task_curves(
+        config_obj, num_tasks, num_runs, args.max_episode_length, args.window_size, args.plot_title,
+        args.learning_ep_compression, total_rewards_sum, total_steps_sum, total_automaton_learning_episodes,
+        output_filename_base, output_path
+    )
